@@ -116,7 +116,7 @@ gross = df2.groupby(['year'])['gross'].mean()
 
 # However, none of these are appropriately represented by a bar chart, as they show change over time
 # The task asks to plot bar charts "that plot properties of the show based on year of telecast" but to me this is time series data that needs plotting as such
-# I have the data for genre organised so I will plot this as a separate bar chart- the first four I will provide code for both line graph (commented out) and bar chart
+# I will provide code for both line graph (commented out) and bar chart
 # Other properties of the show that are non-numeric could be presented in tables, such as most popular first genre in each year, or most popular actor/director in each year
 
 fig3, axs = plt.subplots(2, 2)
