@@ -6,8 +6,8 @@ import pandas as pd
 import numpy as np
 import statsmodels.api as sm
 import re
-import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
+#import matplotlib.pyplot as plt
 
 # Although I cleaned the years for tv_films_reduced.csv, that is not an appropriate dataset to use now, since the average votes for episodes of a TV show are not necessarily integers
 # Therefore I need to clean the tv_and_film dataset as I did for tv_films_reduced
@@ -77,7 +77,11 @@ result2 = model2.fit()
 print(result2.summary())
 
 # Decided that the one without gross was more representative of the whole dataset, so am going to go with that one
-
+#runtime = df.groupby(['runtime'])['votes'].mean()
+#fig, ax = plt.subplots()
+#ax.bar(runtime.index, runtime)
+#plt.show()
+# It's not a pretty bar chart but it does show the distribution of votes according to runtime- average number of votes is highest around 200 minutes, increasing exponentially(?) from 0 to that point
 
 # Note: I thought of trying the genre as a dummy variable (code below), like in the logistic regression in the first interview, but I realised that the Poisson Regression doesn't work with zeroes
 # A quick google search suggested a zero-inflated Poisson regression may work, but (while maybe doable) it is beyond the scope of the exercise.
